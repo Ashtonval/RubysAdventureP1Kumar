@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8642024818914833435}
   - component: {fileID: 8349359128994335710}
   - component: {fileID: 3818815591359188204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ruby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
