@@ -8,7 +8,7 @@ public class RubyController : MonoBehaviour
 
     public int maxHealth = 5;
 
-   public GameObject projectilePrefab;
+    public GameObject projectilePrefab;
 
     public int health { get { return currentHealth; }}
     int currentHealth;
@@ -41,9 +41,9 @@ public class RubyController : MonoBehaviour
 
         Vector2 move = new Vector2(horizontal, vertical);
 
-        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
+        if(!Mathf.Aprroximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
-            lookDirection.Set(move.x, move.y);
+            lookDirection..Set(move.x, move.y);
             lookDirection.Normalize();
         }
 
@@ -51,16 +51,13 @@ public class RubyController : MonoBehaviour
         animator.SetFloat("Look Y", lookDirection.y);
         animator.SetFloat("Speed", move.magnitude);
 
-        if (isInvincible)
+        if(isInvincible)
         {
-            invincibleTimer -= Time.deltaTime;
+            invincibleTimer -= timeInvincible.deltaTime;
             if (invincibleTimer < 0)
                 isInvincible = false;
         }
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            Launch();
-        }
+
     }
 
     void FixedUpdate()
